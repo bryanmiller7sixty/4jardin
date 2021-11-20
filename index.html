@@ -51,7 +51,6 @@
 		function get_books(){
 			 //make secure call with the jwt
 			secure_get_with_token("/secure_api/get_books", {}, function(data){
-				 alert("New data")
 				 $('#Book1').append(data.data[0][1]);
                                  $('#text1').append(data.data[0][2] + "$");
                                  $('#id1').append(data.data[0][0])
@@ -80,7 +79,7 @@
   			<label for="user">Username:</label><br>
   				<input id="user" name="user"><br>
   			<label for="password">Password:</label><br>
-  				<input id="password" name="password" value=""><br><br>
+  				<input type="password" id="password" name="password" value=""><br><br>
   			<input type="submit" value = "Login" onclick="return send_form_login();">
 			<input type="submit" value = "Register" onclick="return send_form_register();">
 		</form>
